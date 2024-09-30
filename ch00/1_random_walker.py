@@ -17,8 +17,8 @@ class Walker:
 
 def main() -> None:
     pygame.init()
-    display_width = 640
-    display_height = 480
+    display_width = 1000
+    display_height = 800
     screen = pygame.display.set_mode((display_width, display_height))
     clock = pygame.time.Clock()
 
