@@ -135,7 +135,7 @@ def main() -> None:
     surface = pygame.display.set_mode((display_width, display_height))
     clock = pygame.time.Clock()
 
-    attractors = []
+    attractors: list[Attractor] = []
     for _ in range(10):
         mass = random.uniform(1, 50)
         radius = int(sqrt(mass) * 2)
@@ -150,7 +150,7 @@ def main() -> None:
         )
         attractors.append(attractor)
 
-    movers = []
+    movers: list[Mover] = []
     for _ in range(10):
         mass = random.uniform(1, 50)
         radius = int(sqrt(mass) * 2)
