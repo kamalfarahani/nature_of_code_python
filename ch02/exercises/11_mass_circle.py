@@ -1,5 +1,7 @@
 import pygame
 
+from math import sqrt
+
 
 class Mover:
     position: pygame.Vector2
@@ -21,7 +23,7 @@ class Mover:
         self.velocity = pygame.Vector2(0, 0)
         self.acceleration = pygame.Vector2(0, 0)
         self.mass = mass
-        self.radius = mass
+        self.radius = sqrt(mass) * 2
         self.width = width
         self.height = height
 
@@ -58,7 +60,7 @@ class Attractor:
     ) -> None:
         self.position = position
         self.mass = mass
-        self.radius = mass
+        self.radius = sqrt(mass) * 2
         self.gravitational_constant = gravitational_constant
         self.is_dragging = False
         self.rollover = False
